@@ -1,0 +1,26 @@
+<div>
+    <h1>{{ad.title}}</h1>
+    <h3>{{ad.description}}</h3>
+    <p class="font-weight-bold">Price: {{ad.price}}</p>
+    <p>{{ad.location}}</p>
+    <p class="text-justify">{{ad.readme}}</p>
+</div>
+
+<div>
+    <h1>Auctions</h1>
+
+    Username: <input type="text" name="name" [(ngModel)]="auction.user"/>
+    Comment: <input type="text" name="name" [(ngModel)]="auction.text"/>
+    Amount: <input type="number" name="amount" [(ngModel)]="auction.amount"/>
+
+    <button (click)="save()">Bid</button>
+
+    <table>
+        <tr *ngFor = "let auction of auctions">
+          <td class="font-weight-bold">{{auction.user}}:</td>
+          <td>{{auction.text}}</td>
+          <td>{{auction.amount}}</td>
+        </tr>
+    </table>
+
+    </div>
